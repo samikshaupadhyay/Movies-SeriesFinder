@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" type = "text/css" href = "D:\Samiksha\codechef\css\style.css">
+</head>
+<body>
+  
+<div class="row">
+  <div class="column">
+    <img src="https://s1.ibtimes.com/sites/www.ibtimes.com/files/styles/embed/public/2019/04/08/avengersendgame-poster.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://www.brooklynvegan.com/files/2019/09/schitts-creek.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://fanart.tv/fanart/movies/13/movieposter/forrest-gump-52196a490f738.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+<h2>POPULAR MOVIES AND WEB SERIES</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <h3>Popular Movies</h3>
+  <li><a href="#">Amelie</a></li>
+  <li><a href="#">Avenger: Endgame</a></li>
+  <li><a href="#">Avenger: Infinity War</a></li>
+
+  <li><a href="#">Die Hard</a></li>
+  <li><a href="#">Eternal Sunshine of a Spotless Mind</a></li>
+  <li><a href="#">Forrest Gump</a></li>
+  <li><a href="#">Inception</a></li>
+  <li><a href="#">Interstellar</a></li>
+  <li><a href="#">Joker</a></li>
+  <li><a href="#">Parasite</a></li>
+  <li><a href="#">The Dark Knight</a></li>
+  <li><a href="#">The Godfather</a></li>
+  <li><a href="#">The Lion King</a></li>
+  <li><a href="#">The Matrix</a></li>
+  <li><a href="#">The Presige</a></li>
+  <li><a href="#">Toy Story</a></li>
+  <li><a href="#">Shawshank Resemption</a></li>
+  <li><a href="#">Up</a></li>
+  <li><a href="#">Your Name</a></li>
+ 
+ <h3>Popular Web Series</h3>
+ <li><a href="#">Bojack Horeseman</a></li>
+  <li><a href="#">Breaking Bad</a></li>
+  <li><a href="#">Brooklyn Nine Nine</a></li>
+  <li><a href="#">Cobra Kai</a></li>
+  <li><a href="#">Game of Thrones</a></li>
+  <li><a href="#">Lucifer</a></li>
+  <li><a href="#">Money Heist</a></li>
+  <li><a href="#">Peaky Blinders</a></li>
+  <li><a href="#">The Haunting Of Hill House</a></li>
+  <li><a href="#">The Office</a></li>
+  <li><a href="#">Schitt's Creek</a></li>
+  <li><a href="#">Sherlock</a></li>
+  <li><a href="#">Stranger Things</a></li>
+  <li><a href="#">The Walking Dead</a></li>
+  
+</ul>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txt;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txt = a.textContent || a.innerText;
+        if (txt.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
